@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class LinearSearch {
     public static void main(String[] args) {
-        int[] numbers = {10, 20, 30, 40, 50};
+        int[] numbers = { 10, 20, 30, 40, 50 };
 
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number to search: ");
