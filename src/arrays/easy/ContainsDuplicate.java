@@ -1,3 +1,5 @@
+// 217. Contains Duplicate
+
 package easy;
 
 import java.util.Arrays;
@@ -17,8 +19,7 @@ public class ContainsDuplicate {
     }
 
     public static void main(String[] args) {
-        int[] nums = {1, 2, 3, 4, 2};
+        int[] nums = { 1, 2, 3, 4, 2 };
         System.out.println("Contains Duplicate: " + containsDuplicate(nums));
     }
 }
-
