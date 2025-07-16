@@ -1,3 +1,4 @@
+package hard;
 // import java.util.*;
 
 class Solution {
