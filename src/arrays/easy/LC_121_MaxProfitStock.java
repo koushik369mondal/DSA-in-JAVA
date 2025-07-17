@@ -1,4 +1,5 @@
-public class MaxProfitStock {
+package easy;
+public class LC_121_MaxProfitStock {
     public static int maxProfit(int[] prices) {
         int buyPrice = Integer.MAX_VALUE;
         int maxProfit = 0;

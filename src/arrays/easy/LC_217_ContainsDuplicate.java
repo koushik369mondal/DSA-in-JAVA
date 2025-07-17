@@ -4,7 +4,7 @@ package easy;
 
 import java.util.Arrays;
 
-public class ContainsDuplicate {
+public class LC_217_ContainsDuplicate {
     public static boolean containsDuplicate(int[] nums) {
         Arrays.sort(nums); // sort the array first
 
