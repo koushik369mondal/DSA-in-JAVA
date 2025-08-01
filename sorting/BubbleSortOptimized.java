@@ -1,19 +1,24 @@
+
 // import java.util.*;
 
-public class BubbleSort {
+public class BubbleSortOptimized {
 
-    // Bubble Sort function
+    // Optimized Bubble Sort
     public static void bubbleSort(int arr[]) {
-        // Outer loop → number of passes
         for (int turn = 0; turn < arr.length - 1; turn++) {
-            // Inner loop → compares adjacent elements
+            boolean swapped = false; // Flag to check if any swap happened
+
             for (int j = 0; j < arr.length - 1 - turn; j++) {
                 if (arr[j] > arr[j + 1]) { // If left > right → swap
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
+                    swapped = true; // Swap happened
                 }
             }
+
+            // If no swap happened in this pass → array is already sorted
+            if (!swapped) break;
         }
     }
 
@@ -26,8 +31,8 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        int arr[] = { 5, 4, 1, 3, 2 }; // Example input
-        bubbleSort(arr); // Sort array
-        printArray(arr); // Print sorted array
+        int arr[] = { 1, 2, 3, 4, 5 }; // Already sorted input
+        bubbleSort(arr); // Optimized bubble sort
+        printArray(arr); // Output: 1 2 3 4 5
     }
 }
