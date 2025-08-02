@@ -4,7 +4,7 @@ public class SelectionSort {
         for (int i = 0; i < arr.length - 1; i++) {
             int minPos = i; // Assume the first element is the minimum
             for (int j = i + 1; j < arr.length; j++) {
-                if (arr[minPos] > arr[j]) {
+                if (arr[minPos] < arr[j]) {
                     minPos = j; // Update minPos if a smaller element is found
                 }
             }
