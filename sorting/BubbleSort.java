@@ -2,7 +2,6 @@
 
 public class BubbleSort {
 
-    // Bubble Sort function
     public static void bubbleSort(int arr[]) {
         // Outer loop → number of passes
         for (int turn = 0; turn < arr.length - 1; turn++) {
@@ -26,7 +25,7 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        int arr[] = { 5, 4, 1, 3, 2 }; // Example input
+        int arr[] = { 5, 4, 1, 3, 2 };
         bubbleSort(arr); // Sort array
         printArray(arr); // Print sorted array
     }
