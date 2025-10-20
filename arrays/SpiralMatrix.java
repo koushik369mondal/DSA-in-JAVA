@@ -37,7 +37,7 @@ public class SpiralMatrix {
         System.out.println();
     }
 
-    public static int diagonalSum(int matrix[][]){ //0(N^2)
+    public static int diagonalSum(int matrix[][]){ //0(N)
         int sum = 0;
 
         // for(int i=0; i<matrix.length; i++){
@@ -63,6 +63,27 @@ public class SpiralMatrix {
 
         return sum;
     }
+
+    public static boolean staircaseSearch(int matrix[][], int key){
+        int row = 0, col = matrix[0].length - 1;
+
+        while(row < matrix.length && col >= 0){
+            if(matrix[row][col] == key){
+                System.out.println("Key found at (" + row + "," + col + ")");
+                return true;
+            }
+
+            else if(key < matrix[row][col]){
+                col--;
+            }
+
+            else{
+                row++;
+            }
+        }
+        System.out.println("Key not found");
+        return false;
+    }
     
     public static void main(String[] args) {
         int matrix[][] = {
@@ -71,6 +92,7 @@ public class SpiralMatrix {
             {9, 10, 11, 12},
             {13, 14, 15, 16}
         };
-        System.out.println(diagonalSum(matrix));
+        int key = 15;
+        System.out.println(staircaseSearch(matrix, key));
     }
 }
